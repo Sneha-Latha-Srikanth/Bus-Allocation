@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bus Allocation</title>
+    <meta charset="utf-8">
+    <link href='page.css' rel='stylesheet' type='text/css'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Maven+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="allocation.js"></script>
+</head>
+<body>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+  
+    <div id="box">
+        <form id="forms" name="forms">
+            <h2>Bus Allocation</h2>
+            <hr size="20" color="black">
+            <div class="form">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Number of Buses</label>
+                    <input type="number" class="form-control" id="bus" aria-describedby="emailHelp" placeholder="Buses">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Number of People</label>
+                    <input type="number" class="form-control" id="ppl" placeholder="People">
+                </div>
+            </div>
+            
+        </form>
+        <button class="btn btn-primary" id="submit" onclick="validate()">Submit</button>
+        <p id="output"></p>
+    </div>
+</body>
+<script>
+    $(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("slow");
+        });
+</script>
+</html>
